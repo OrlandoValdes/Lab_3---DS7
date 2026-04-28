@@ -285,7 +285,7 @@ npm run dev
 
 ---
 
-##⏱️Fecha de Ejecución del Laboratorio
+## ⏱️ Fecha de Ejecución del Laboratorio
 
 Sabado 25 de abril de 2026
 

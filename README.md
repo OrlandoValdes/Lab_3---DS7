@@ -155,49 +155,42 @@ Route::resource('products', ProductController::class);
 
 ## Rutas CRUD Generadas
 
-table>
-  <thead>
-    <tr>
-      <th>Método</th>
-      <th>Ruta</th>
-      <th>Acción</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GET</td>
-      <td>/products</td>
-      <td>index</td>
-    </tr>
-    <tr>
-      <td>GET</td>
-      <td>/products/create</td>
-      <td>create</td>
-    </tr>
-    <tr>
-      <td>POST</td>
-      <td>/products</td>
-      <td>store</td>
-    </tr>
-    <tr>
-      <td>GET</td>
-      <td>/products/{id}</td>
-      <td>show</td>
-    </tr>
-    <tr>
-      <td>GET</td>
-      <td>/products/{id}/edit</td>
-      <td>edit</td>
-    </tr>
-    <tr>
-      <td>PUT / PATCH</td>
-      <td>/products/{id}</td>
-      <td>update</td>
-    </tr>
-    <tr>
-      <td>DELETE</td>
-      <td>/products/{id}</td>
-      <td>destroy</td>
-    </tr>
-  </tbody>
-</table>
+| Método     | Ruta                | Acción   |
+| ---------- | ------------------- | -------- |
+| GET        | /products           | index    |
+| GET        | /products/create    | create   |
+| POST       | /products           | store    |
+| GET        | /products/{id}      | show     |
+| GET        | /products/{id}/edit | edit     |
+| PUT/PATCH  | /products/{id}      | update   |
+| DELETE     | /products/{id}      | destroy  |
+
+# 🎨 Interfaz Gráfica
+
+## Instalar Laravel UI + Bootstrap
+
+```bash
+composer require laravel/ui --dev
+php artisan ui bootstrap --auth
+npm install
+npm run dev
+```
+
+# ▶️ Ejecutar Proyecto
+
+```bash
+php artisan serve
+```
+
+Servidor: http://127.0.0.1:8000
+CRUD Productos: http://127.0.0.1:8000/products
+
+# 🧪 Funcionalidades
+
+✅ Crear productos
+✅ Listar productos
+✅ Editar productos
+✅ Eliminar productos
+✅ Validación de formularios
+✅ Diseño Bootstrap
+

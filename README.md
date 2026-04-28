@@ -43,16 +43,16 @@ En la arquitectura MVC:
 
 ---
 
-# 🚀 Instalación del Proyecto
+## 🚀 Instalación del Proyecto
 
-## 1️⃣ Crear Proyecto Laravel
+### 1️⃣ Crear Proyecto Laravel
 
 ```bash
 laravel new crud_rapido
 cd crud_rapido
 ```
 
-## 2️⃣ Configurar Variables de Entorno
+### 2️⃣ Configurar Variables de Entorno
 
 Editar archivo .env
 
@@ -62,7 +62,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-## 3️⃣ Solución Error Longitud de Cadena
+### 3️⃣ Solución Error Longitud de Cadena
 
 Editar: app/Providers/AppServiceProvider.php
 
@@ -75,7 +75,7 @@ public function boot(): void
 }
 ```
 
-## 4️⃣ Limpiar Configuración
+### 4️⃣ Limpiar Configuración
 
 ```bash
 php artisan config:clear
@@ -85,15 +85,15 @@ php artisan config:cache
 
 ---
 
-# 🗄️ Base de Datos
+## 🗄️ Base de Datos
 
-## 1️⃣ Crear Modelo + Migración
+### 1️⃣ Crear Modelo + Migración
 
 ```bash
 php artisan make:model Product -m
 ```
 
-## 2️⃣ Editar Migración
+### 2️⃣ Editar Migración
 
 Archivo: database/migrations/create_products_table.php
 
@@ -105,7 +105,7 @@ $table->integer('stock');
 $table->timestamps();
 ```
 
-## 3️⃣ Ejecutar Migraciones
+### 3️⃣ Ejecutar Migraciones
 
 ```bash
 php artisan migrate
@@ -113,7 +113,7 @@ php artisan migrate
 
 ---
 
-# 📦 Modelo Product
+## 📦 Modelo Product
 
 Archivo: app/Models/Product.php
 
@@ -125,27 +125,27 @@ protected $fillable = [
 ];
 ```
 
-## 📌 Importancia de $fillable
+### 📌 Importancia de $fillable
 
 Permite la asignación masiva segura de datos al crear o actualizar registros.
 
 ---
 
-# ⚙️ Generación CRUD Automática
+## ⚙️ Generación CRUD Automática
 
-## 1️⃣ Instalar Generador
+### 1️⃣ Instalar Generador
 
 ```bash
 composer require ibex/crud-generator --dev
 ```
 
-## 2️⃣ Publicar Recursos
+### 2️⃣ Publicar Recursos
 
 ```bash
 php artisan vendor:publish --tag=crud
 ```
 
-## 3️⃣ Crear CRUD
+### 3️⃣ Crear CRUD
 
 ```bash
 php artisan make:crud products
@@ -153,7 +153,7 @@ php artisan make:crud products
 
 ---
 
-# 🛣️ Rutas
+## 🛣️ Rutas
 
 Archivo: routes/web.php
 
@@ -163,7 +163,7 @@ use App\Http\Controllers\ProductController;
 Route::resource('products', ProductController::class);
 ```
 
-## Rutas CRUD Generadas
+### Rutas CRUD Generadas
 
 | Método     | Ruta                | Acción   |
 | ---------- | ------------------- | -------- |
@@ -177,9 +177,9 @@ Route::resource('products', ProductController::class);
 
 ---
 
-# 🎨 Interfaz Gráfica
+## 🎨 Interfaz Gráfica
 
-## Instalar Laravel UI + Bootstrap
+### Instalar Laravel UI + Bootstrap
 
 ```bash
 composer require laravel/ui --dev
@@ -190,7 +190,7 @@ npm run dev
 
 ---
 
-# ▶️ Ejecutar Proyecto
+## ▶️ Ejecutar Proyecto
 
 ```bash
 php artisan serve
@@ -199,7 +199,7 @@ php artisan serve
 Servidor: http://127.0.0.1:8000
 CRUD Productos: http://127.0.0.1:8000/products
 
-# 🧪 Funcionalidades
+## 🧪 Funcionalidades
 
 ✅ Crear productos <br>
 ✅ Listar productos <br>
@@ -210,7 +210,7 @@ CRUD Productos: http://127.0.0.1:8000/products
 
 ---
 
-# 🖼️ Capturas de Ejecución
+## 🖼️ Capturas de Ejecución
 
 ## Pantalla de la Tabla de Productos
 
@@ -234,28 +234,28 @@ CRUD Productos: http://127.0.0.1:8000/products
 
 --- 
 
-# ⚠️ Problemas Frecuentes
+## ⚠️ Problemas Frecuentes
 
-## Vite no reconocido
+### Vite no reconocido
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Tabla ya existe
+### Tabla ya existe
 
 ```bash
 php artisan migrate:fresh
 ```
 
-## ProductRequest no existe
+### ProductRequest no existe
 
 ```bash
 php artisan make:request ProductRequest
 ```
 
-## No guarda datos
+### No guarda datos
 
 Agregar:
 
@@ -265,7 +265,7 @@ protected $fillable = [...]
 
 ---
 
-# 📚 Comandos Útiles
+## 📚 Comandos Útiles
 
 ```bash
 php artisan route:list
@@ -276,7 +276,7 @@ composer dump-autoload
 npm run dev
 ```
 
-# 📜 Referencias
+## 📜 Referencias
 
 1. Laravel. (2026). *Official Laravel Documentation*. https://laravel.com/docs
 2. Laravel. (2026). *Database: Migrations*. https://laravel.com/docs/migrations
@@ -285,11 +285,11 @@ npm run dev
 
 ---
 
-#⏱️Fecha de Ejecución del Laboratorio
+##⏱️Fecha de Ejecución del Laboratorio
 
 Sabado 25 de abril de 2026
 
--- 
+---
 
 <p align="center">
 Este laboratorio ha sido desarrollado por el estudiante de la Universidad 

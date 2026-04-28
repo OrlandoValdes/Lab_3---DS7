@@ -1,5 +1,7 @@
 # 📦 Documentacion de Laboratorio #3 de Desarrollo de Software 7 - CRUD Rápido con Laravel
 
+---
+
 ## 📌 Introducción
 
 Este proyecto consiste en el desarrollo de un sistema CRUD (Create, Read, Update, Delete) para la gestión de productos utilizando **Laravel**, **MySQL**, **Bootstrap** y herramientas de automatización como **ibex/crud-generator**.
@@ -81,6 +83,8 @@ php artisan cache:clear
 php artisan config:cache
 ```
 
+---
+
 # 🗄️ Base de Datos
 
 ## 1️⃣ Crear Modelo + Migración
@@ -107,6 +111,8 @@ $table->timestamps();
 php artisan migrate
 ```
 
+---
+
 # 📦 Modelo Product
 
 Archivo: app/Models/Product.php
@@ -122,6 +128,8 @@ protected $fillable = [
 ## 📌 Importancia de $fillable
 
 Permite la asignación masiva segura de datos al crear o actualizar registros.
+
+---
 
 # ⚙️ Generación CRUD Automática
 
@@ -142,6 +150,8 @@ php artisan vendor:publish --tag=crud
 ```bash
 php artisan make:crud products
 ```
+
+---
 
 # 🛣️ Rutas
 
@@ -165,6 +175,8 @@ Route::resource('products', ProductController::class);
 | PUT/PATCH  | /products/{id}      | update   |
 | DELETE     | /products/{id}      | destroy  |
 
+---
+
 # 🎨 Interfaz Gráfica
 
 ## Instalar Laravel UI + Bootstrap
@@ -175,6 +187,8 @@ php artisan ui bootstrap --auth
 npm install
 npm run dev
 ```
+
+---
 
 # ▶️ Ejecutar Proyecto
 
@@ -187,10 +201,103 @@ CRUD Productos: http://127.0.0.1:8000/products
 
 # 🧪 Funcionalidades
 
-✅ Crear productos
-✅ Listar productos
-✅ Editar productos
-✅ Eliminar productos
-✅ Validación de formularios
-✅ Diseño Bootstrap
+✅ Crear productos <br>
+✅ Listar productos <br>
+✅ Editar productos <br>
+✅ Eliminar productos <br>
+✅ Validación de formularios <br>
+✅ Diseño Bootstrap <br>
+
+---
+
+# 🖼️ Capturas de Ejecución
+
+## Pantalla de la Tabla de Productos
+
+![image alt](https://github.com/OrlandoValdes/Lab_3---DS7/blob/master/Capturas/Pantalla_TablaProductos.png?raw=true)
+
+## Pantalla de Creación de Producto
+
+![image alt](https://github.com/OrlandoValdes/Lab_3---DS7/blob/master/Capturas/Pantalla_CrearProducto.png?raw=true)
+
+## Pantalla de Enseñar Producto
+
+![image alt](https://github.com/OrlandoValdes/Lab_3---DS7/blob/master/Capturas/Pantalla_Ense%C3%B1arProducto.png?raw=true)
+
+## Pantalla de Actualizar Producto
+
+![image alt](https://github.com/OrlandoValdes/Lab_3---DS7/blob/master/Capturas/Pantalla_ActualizarProducto.png?raw=true)
+
+## Pantalla de Eliminar Producto
+
+![image alt](https://github.com/OrlandoValdes/Lab_3---DS7/blob/master/Capturas/Pantalla_EliminarProducto.png?raw=true)
+
+--- 
+
+# ⚠️ Problemas Frecuentes
+
+## Vite no reconocido
+
+```bash
+npm install
+npm run dev
+```
+
+## Tabla ya existe
+
+```bash
+php artisan migrate:fresh
+```
+
+## ProductRequest no existe
+
+```bash
+php artisan make:request ProductRequest
+```
+
+## No guarda datos
+
+Agregar:
+
+```bash
+protected $fillable = [...]
+```
+
+---
+
+# 📚 Comandos Útiles
+
+```bash
+php artisan route:list
+php artisan migrate
+php artisan migrate:fresh
+php artisan migrate:rollback
+composer dump-autoload
+npm run dev
+```
+
+# 📜 Referencias
+
+1. Laravel. (2026). *Official Laravel Documentation*. https://laravel.com/docs
+2. Laravel. (2026). *Database: Migrations*. https://laravel.com/docs/migrations
+3. Bootstrap Team. (2026). *Bootstrap Official Documentation*. https://getbootstrap.com/docs/
+4. Composer. (2026). *Composer Documentation*. https://getcomposer.org/doc/
+
+---
+
+#⏱️Fecha de Ejecución del Laboratorio
+
+Sabado 25 de abril de 2026
+
+-- 
+
+<p align="center">
+Este laboratorio ha sido desarrollado por el estudiante de la Universidad 
+Tecnológica de Panamá: <br>
+Nombre: Orlando Antonio Valdés Bernal<br>
+Correo: orlando.valdes2@utp.ac.pa<br>
+Curso: Desarrollo de Software 7 - 1GS131<br>
+Instructor del Laboratorio: Irina Fong.
+</p>
+
 
